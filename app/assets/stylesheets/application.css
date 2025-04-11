@@ -1,0 +1,182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ /* app/assets/stylesheets/application.css */
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+:root{
+    --white: #ffffff;
+    --black: #000000;
+    --blue: #0095F6;
+    --grey: #d1d1d1;
+}
+
+.modo-claro {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ h1 { 
+    font-style: italic !important;
+    padding: 25px 12px 16px !important;
+    margin-bottom: 19px !important;
+}
+
+ a {
+    text-decoration: none;
+}
+/* 
+ span {
+    font-weight: bold;
+} */
+
+.container-fluid {
+    display: flex;
+}
+
+.sidebar {
+    display: row;
+    height: 100vh;
+    width: 15%;
+    border-right: solid 1px var(--grey);
+    position: fixed;
+    padding: 8px 12px;
+}
+
+.sidebar .itens {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .itens .nav-item{
+    display: flex;
+    height: 24px;
+    width: 196px;
+    margin: 4px 0;
+    padding: 12px;
+    align-items: center;
+}
+
+.sidebar .itens .nav-item :hover{
+    background-color: var(--grey);
+}
+
+.sidebar .itens .nav-item .a{
+    text-decoration: none;
+}
+
+.sidebar .itens .nav-item img{
+    display: flex;
+    height: 26px;
+    background-size: cover;
+}
+
+.sidebar .itens .nav-item span{
+    display: flex;
+    font-size: 20px !important;
+    padding: 0 0 0 16px;
+    color: var(--black) !important;
+}
+
+.next-post .img {
+    background-size: cover;
+}
+
+.feed {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%
+}
+
+.story {
+    width: 630px;
+    height: 84px;
+    padding: 8px 0;
+}
+
+.feed-posts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 630px;
+    margin-top: 16px;
+}
+
+.article {
+    width: 470px;
+    height: 850px;
+}
+
+.infos { 
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.photo-user {
+    height: 27px;
+    width: 27px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--black)
+}
+
+.posts {
+    width: 470px;
+    height: 813px;
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid var(--grey);
+    margin: 0 0 20px 0;
+}
+
+.post {
+    width: 468px;
+    height: 584px;
+}
+
+.next-post {
+    width: 30px;
+    height: 30px;
+}
+
+.next-post .img {
+    background-size: cover;
+}
+
+.interactions {
+    display: flex;
+}
+
+.actions {
+    display: flex;
+    height: 24px;
+    width: 24px;
+}
+
+.sugests {
+    width: 319px;
+    height: 911px;
+    padding: 0 0 0 64px;
+}
+
+.space {
+    width: auto;
+}
