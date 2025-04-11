@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+# InstagramCopy
+Basically a copy of instagram with all it's features just for practice.
