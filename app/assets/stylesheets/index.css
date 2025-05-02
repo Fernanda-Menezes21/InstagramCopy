@@ -1,10 +1,144 @@
 .feed {
+    flex: 1;
     display: flex;
-    width: 100%;
-    height: 100%
+    min-width: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
-.feed-post {
-    height: 468px;
+.story {
+    display: flex;
+    justify-content: space-between;
+    width: 630px;
+    height: 84px;
+    padding: 8px 0;
+    overflow: hidden;
+}
+
+.storys {
+    width: 72px;
+    height: 84px;
+    padding: 8px 0;
+}
+
+
+.story .photo-user-story{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 56px;
+    width: 56px;
+    padding: 4px 8px 8px 8px;
+    border-radius: 100px;
+    border: 1px solid var(--black)
+}
+
+.story .user-name-story{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 66px;
+    height: 16px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.feed-posts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 630px;
+    margin-top: 16px;
+}
+
+.article {
+    width: 470px;
+    height: 850px;
+}
+
+.post-infos { 
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 470px;
+}
+
+.user-infos {
+    display: flex;
+    padding: 0 2px;
+    justify-content: space-around;
+}
+
+.photo-user {
+    height: 27px;
+    width: 27px;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid var(--black)
+}
+
+.posts {
+    width: 470px;
+    height: 813px;
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid var(--grey);
+    margin: 0 0 20px 0;
+}
+
+.story {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.post {
     width: 468px;
+    height: 584px;
+    border: 1px solid var(--black)
+}
+
+.next-post {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.last-post {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.next-post .img {
+    background-size: cover;
+}
+
+.interactions {
+    display: flex;
+}
+
+.actions {
+    display: flex;
+    height: 24px;
+    width: 24px;
+}
+
+.actions-save {
+    display: flex;
+    margin: 100px;
+}
+
+.sugests {
+    width: 311px;
+    height: 895px;
+    padding: 0 0 0 64px;
+}
+
+.infos {
+    padding: 8px 16px;
 }

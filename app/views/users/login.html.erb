@@ -1,0 +1,39 @@
+<% content_for :page_stylesheet do %>
+  <%= stylesheet_link_tag "login", "data-turbo-track": "reload" %>
+<% end %>
+
+<% content_for :hide_sidebar do %>
+<% end %>
+
+<div class="wrapper">
+    <div class="login-container">
+        <form> 
+            <h1> Instagram</h1>
+            <input placeholder="Telefone, nome de usuário ou email">
+            <input placeholder="Senha">
+            <button> Entrar </button>
+            <div class="flex-column">
+                <hr/>
+                <span>  OU  </span>
+                <hr/>
+            </div>
+            <div class="center">
+                <div class="interactive-button" style="color: var(--blue);">
+                    <%= image_tag 'google.svg', alt: 'google_logo'%>
+                    Entrar com o Goggle
+                </div>
+                <div class="interactive-button" style="color: var(--darker-blue);">
+                    Esqueceu a senha?
+                </div>
+                <div class="flex-column" style="margin: 30px; gap: 5px;">
+                    <div>
+                        Não tem conta? 
+                    </div>
+                    <div class="interactive-button" style="color: var(--blue);">
+                        Cadastre-se
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

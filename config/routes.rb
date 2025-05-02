@@ -12,5 +12,17 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  resources :users
+
   root 'feed#index'
+
+  get '/new_user', to: 'users#new', as: 'new'
+  post '/users', to: 'users#create'
+
+  get '/login', to: 'users#login', as: 'login'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
+  get '/users/profile/:id', to: 'users#profile', as: 'profile'
+
 end

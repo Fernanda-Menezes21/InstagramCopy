@@ -1,0 +1,44 @@
+<% content_for :page_stylesheet do %>
+  <%= stylesheet_link_tag "new", "data-turbo-track": "reload" %>
+<% end %>
+
+<% content_for :hide_sidebar do %>
+<% end %>
+
+<div class="wrapper">
+    <div class="new-container">
+        <%= form_with model: @user, html: {class: "center gap15"} do |f| %> 
+            <h1 style="margin: 0 !important;"> Instagram</h1>
+            <span style="font-weight: bold; color: var(--darker-grey)">  Cadastre-se para ver fotos e vídeos dos seus amigos. </span>
+            <button style="background-color: var(--blue)!important;">
+                <%= image_tag 'google.svg', alt: 'google_logo'%>
+                Entrar com o Goggle
+            </button>
+
+            <span>  OU </span>
+
+            <div class="flex-column margin9 gap5">
+                <%= f.email_field :email, placeholder: "Número de celular ou email", class: "margin0 box-sizing"%>
+                <%= f.password_field :password, placeholder: "Senha", class: "margin0 box-sizing"%>
+                <%= f.text_field :real_name, placeholder: "Nome completo", class: "margin0 box-sizing"%>
+                <%= f.text_field :user_name, placeholder: "Nome de usuário", class: "margin0 box-sizing"%>
+            </div>
+
+            <div class="flex-column gap15">
+                <div class="flex-column"> 
+                    <span>  As pessoas que usam nosso serviço podem ter carregado suas informações de contato no Instagram. <span style="color: var(--darker-blue)">  Saiba mais </span></span>
+                </div>
+                <div class="flex-column"> 
+                    <span>  Ao cadastrar-se, você concorda com nossos <span style="color: var(--darker-blue)"> Termos, Política de Privacidade e Política de Cookies</span></span>
+                </div>
+            </div>
+
+            <button> Cadastre-se </button>
+        <% end %>
+
+    </div>
+    <div class="flex-column center border" style="width: 350px; height: 81px;">
+        <div>Tem uma conta?</div>
+        <div class="interactive-button" style="color: var(--blue); font-weight: bold;"> Conecte-se</div>
+    </div>
+</div>

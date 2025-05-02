@@ -1,0 +1,78 @@
+<% content_for :page_stylesheet do %>
+  <%= stylesheet_link_tag "profile", "data-turbo-track": "reload" %>
+<% end %>
+
+<div class="wrapper-full">
+    <div class="profile">
+        <div class="flex-grid profile-infos">
+            <div class="photo-user-profile">
+            </div>
+            <div class="user-infos">
+                <div class="flex-row user-actions">
+                    <span class="user-name"> <%= @user.user_name %> </span> 
+                    <button>
+                        Editar perfil
+                    </button>
+                    <button>
+                        Itens Arquivados
+                    </button>
+                    <%= image_tag 'settings.svg', alt: 'settings' %>
+                </div>
+                <div class="flex-row user-metrics">
+                    <div>
+                        <%= @user.posts_count %>
+                    </div>
+                    <div>
+                        <%= @user.followers_count %>
+                    </div>
+                    <div>
+                        <%= @user.following_count %>
+                    </div>
+                </div>
+                <div  class="user-description">
+                    <div>
+                        <%= @user.real_name %>
+                    </div>
+                    <div>
+                        <%= @user.bio %>
+                    </div>
+                    <div>
+                        link
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-highlights">
+        
+        </div>
+        <div class="flex-row profile-posts-options">
+            <div>
+                <%= image_tag 'grid.svg', alt: 'settings' %>
+                PUBLICAÇÕES
+            </div>
+            <div>
+                <%= image_tag 'reels.svg', alt: 'reels' %>
+                REELS
+            </div>
+            <div>
+                <%= image_tag 'save.svg', alt: 'save' %>
+                SALVOS
+            </div>
+            <div>
+                <%= image_tag 'mention.svg', alt: 'mention' %>
+                MARCADOS
+            </div>
+        </div>
+        <div class="gap5 flex-grid profile-posts-grid">
+            <div class="profile-post"> 
+                foto ou video 
+            </div>
+            <div class="profile-post"> 
+                foto ou video 
+            </div>
+            <div class="profile-post"> 
+                foto ou video 
+            </div>
+        </div>
+    </div>
+</div>

@@ -23,10 +23,15 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload"%>
+    <%= yield :page_stylesheet %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <% unless @hide_sidebar %>
+      <%= render "shared/sidebar" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
